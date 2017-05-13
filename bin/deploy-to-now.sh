@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
-./node_modules/.bin/now deploy --token=$NOW_TOKEN
-./node_modules/.bin/now alias --token=$NOW_TOKEN
+yarn global add now
+
+cd apps/api
+
+now deploy --forward-npm --token=$NOW_TOKEN
+now alias --token=$NOW_TOKEN
